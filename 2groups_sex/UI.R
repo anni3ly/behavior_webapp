@@ -14,7 +14,6 @@ ui = shinyUI({fluidPage(
       fluidRow(
         align = "center",
         br(),
-        tags$a(href = 'https://www.mountsinai.org', style = 'height: 0px; padding: 0px'), 
         tags$img(src = 'mountsinai.png', style = 'height: 100px; width: 200px'), 
         br(),
         br(),
