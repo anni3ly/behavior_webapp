@@ -305,9 +305,6 @@ server = function(input, output)({
     reactive.data2()
   })
   
-  #output$exclusions <- renderTable({
-  #  exclusions
-  #})
   #---------------------------------------- 
   # Download Handlers ----
   # output$downloadplot<- downloadHandler(
