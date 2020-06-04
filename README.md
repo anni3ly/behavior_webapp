@@ -3,6 +3,6 @@ The purpose of this code is to automate data processing and statistical analysis
 
 The code is split into folders depending on the number of experimental groups (2-3) and whether or not sex was a covariate factor. 
 
-For an example, see https://hurd-laboratory.shinyapps.io/proteomics_behavior/
+For an example of the final product, see https://hurd-laboratory.shinyapps.io/proteomics_behavior/ Note: This project had 3 experimental groups.
 
 Contact me at anni3.ly@gmail.com for any issues.
