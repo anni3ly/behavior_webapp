@@ -14,7 +14,7 @@ ui = shinyUI({fluidPage(
       fluidRow(
         align = "center",
         br(),
-        tags$img(src = 'mountsinai.png', style = 'height: 100px; width: 200px'), 
+        tags$img(src = 'mountsinai.png', style = 'height: 100px; width: 200px'), #this is where you would put in the name of your own image from folder "www" 
         br(),
         br(),
         br(),
@@ -50,7 +50,7 @@ ui = shinyUI({fluidPage(
           tabsetPanel(type = "tabs",
                       tabPanel(tags$b("Master Data"),
                                br(),
-                               dataTableOutput("master.data"),style = "height: auto !important; overflow-y: scroll; overflow-x: scroll;"),
+                               DT::dataTableOutput("master.data"),style = "height: auto !important; overflow-y: scroll; overflow-x: scroll;"),
                       tabPanel(tags$b("Main Plot"),
                                br(),
                                box(width=12,
@@ -65,7 +65,7 @@ ui = shinyUI({fluidPage(
                                                step=1)),
                                box(width=12,
                                    title= "Y Variable Data Summary by Sessions", solidHeader=TRUE,
-                                   dataTableOutput("table"), style = "height: auto !important; overflow-y: scroll; overflow-x: scroll;")),
+                                   DT::dataTableOutput("table"), style = "height: auto !important; overflow-y: scroll; overflow-x: scroll;")),
                       tabPanel(tags$b("Subjects"), 
                                br(),
                                box(width=12,
