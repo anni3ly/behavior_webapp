@@ -14,8 +14,7 @@ ui = shinyUI({fluidPage(
       fluidRow(
         align = "center",
         br(),
-        tags$a(href = 'https://www.mountsinai.org', style = 'height: 0px; padding: 0px'), 
-        tags$img(src = 'mountsinai.png', style = 'height: 100px; width: 200px'), 
+        tags$img(src = 'mountsinai.png', style = 'height: 100px; width: 200px'), # this is where you would put your image from the folder "www"
         br(),
         br(),
         br(),
@@ -39,11 +38,7 @@ ui = shinyUI({fluidPage(
                      selected = "csv"),
         HTML("Select filetype, then 'Download Data'"),
         br(),
-        downloadButton("downloaddata", "Download Data"),
-        br(),
-        "The download button has been",
-        br(),
-        "temporarily disabled.")),
+        downloadButton("downloaddata", "Download Data"))),
     
     
     dashboardBody(
@@ -65,7 +60,6 @@ ui = shinyUI({fluidPage(
                                box(width=12,
                                    title="Session Input", solidHeader=TRUE,
                                    sliderInput("session", "Sessions", 
-                                               #min(as.numeric(levels(FR_data$session))), last(as.numeric(levels(FR_data$session))),
                                                min(FR_data$session), max(FR_data$session),
                                                value = c(1, 40),
                                                step=1)),
