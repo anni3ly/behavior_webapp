@@ -69,3 +69,7 @@ for (q in (1:nrow(FR_data))) ({
   })
   
 }) 
+    
+options(contrasts=c("contr.sum", "contr.poly"))
+appCSS <- "#loading-content {position: absolute; background: #000000; opacity: 0.8; z-index: 100; left: 0; right: 0; height: 100%; text-align: center; color: #FFFFFF;}"
+
