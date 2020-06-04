@@ -298,11 +298,11 @@ server = function(input, output)({
   # Render Tables ----
   
   output$master.data<- DT::renderDataTable({
-    datatable(FR_data, filter='top', options=list(pagelength=25), class = 'cell-border stripe')
+    DT::datatable(FR_data, filter='top', options=list(pagelength=25), class = 'cell-border stripe')
     })
           
   output$table<- DT::renderDataTable({
-    datatable(reactive.data2(), filter='top', options=list(pagelength=25), class = 'cell-border stripe')
+    DT::datatable(reactive.data2(), filter='top', options=list(pagelength=25), class = 'cell-border stripe')
   })
   
   #---------------------------------------- 
