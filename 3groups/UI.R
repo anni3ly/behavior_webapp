@@ -150,7 +150,7 @@ ui = shinyUI({fluidPage(
                                    title="Information",
                                    "*These are repeated measures of variance analysis using a linear mixed-effects model (LMM) across all sessions.",
                                    br(),
-                                   "Individual subjects nested within session is annotated as a random effect.",
+                                   "Individual subjects variability is annotated as a random effect.",
                                    br(),
                                    "An ANOVA using LMM can be conducted when the data have met two primary assumptions:",
                                    br(),
