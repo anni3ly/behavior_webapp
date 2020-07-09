@@ -37,7 +37,7 @@ server = function(input, output)({
   })
   
   reactive.data10<- reactive({
-    lmer(presses ~ session*lever*group + (group|subject), data=reactive.data9())
+    lmer(presses ~ session*lever*group + (1|subject), data=reactive.data9())
   })
   
   reactive.data13<- reactive({
@@ -81,7 +81,7 @@ server = function(input, output)({
   })
   
   reactive.data12<- reactive({
-    lmer(presses ~ session*lever*group + (1|subject), data=reactive.data16())
+    lmer(presses ~ session*lever*group + (session|subject), data=reactive.data16())
   })
   
   vals4 <- reactiveValues(
