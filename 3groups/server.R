@@ -45,7 +45,7 @@ server = function(input, output)({
   })
   
   reactive.data10<- reactive({
-    lmer(presses ~ session*lever*group + (group|subject), data=reactive.data9())
+    lmer(presses ~ session*lever*group + (1|subject), data=reactive.data9())
   })
   
   reactive.data13<- reactive({
@@ -60,7 +60,7 @@ server = function(input, output)({
   })
   
   reactive.data14<- reactive({
-    lmer(presses ~ session*lever*group + (group|subject), data=reactive.data13())
+    lmer(presses ~ session*lever*group + (1|subject), data=reactive.data13())
   })
   
   reactive.data16<- reactive({
@@ -91,7 +91,7 @@ server = function(input, output)({
   })
   
   reactive.data12<- reactive({
-    lmer(presses ~ session*lever*group + (group|subject), data=reactive.data16())
+    lmer(presses ~ session*lever*group + (1|subject), data=reactive.data16())
   })
   
   vals4 <- reactiveValues(
@@ -258,11 +258,11 @@ server = function(input, output)({
   })
   
   output$stats_wald2<-renderPrint({
-    Anova(lmer(presses ~ session*lever*group + (group|subject), data=reactive.data9()), type=2)
+    Anova(lmer(presses ~ session*lever*group + (1|subject), data=reactive.data9()), type=2)
   })
   
   output$stats_wald3<-renderPrint({
-    Anova(lmer(presses ~ session*lever*group + (group|subject), data=reactive.data9()), type=3)
+    Anova(lmer(presses ~ session*lever*group + (1|subject), data=reactive.data9()), type=3)
   })
   
   # output$stats_s2<-renderPrint({
@@ -279,12 +279,12 @@ server = function(input, output)({
   
   
   output$last3sessions_anova3<-renderPrint({
-    Anova(lmer(presses ~ session*lever*group + (group|subject), data=reactive.data16()), type=3)
+    Anova(lmer(presses ~ session*lever*group + (1|subject), data=reactive.data16()), type=3)
     #aov(presses~group*lever*session + Error(subject/session), data=reactive.data16())
   })
   
   output$last3sessions_anova2<-renderPrint({
-    Anova(lmer(presses ~ session*lever*group + (group|subject), data=reactive.data16()), type=2)
+    Anova(lmer(presses ~ session*lever*group + (1|subject), data=reactive.data16()), type=2)
     #aov(presses~group*lever*session + Error(subject/session), data=reactive.data16())
   })
   
