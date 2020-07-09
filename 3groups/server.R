@@ -279,12 +279,12 @@ server = function(input, output)({
   
   
   output$last3sessions_anova3<-renderPrint({
-    Anova(lmer(presses ~ session*lever*group + (1|subject), data=reactive.data16()), type=3)
+    Anova(lmer(presses ~ session*lever*group + (session|subject), data=reactive.data16()), type=3)
     #aov(presses~group*lever*session + Error(subject/session), data=reactive.data16())
   })
   
   output$last3sessions_anova2<-renderPrint({
-    Anova(lmer(presses ~ session*lever*group + (1|subject), data=reactive.data16()), type=2)
+    Anova(lmer(presses ~ session*lever*group + (session|subject), data=reactive.data16()), type=2)
     #aov(presses~group*lever*session + Error(subject/session), data=reactive.data16())
   })
   
